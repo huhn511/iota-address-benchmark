@@ -1,18 +1,13 @@
 
 console.log("index.js called.")
-const fs = require('fs');
 
 async function runWasm() {
     console.log("run wasm")
     try {
-        const buf = fs.readFileSync('./pkg/index_bg.wasm');
-        let res = await WebAssembly.instantiate(buf);
-        const { generate_address } = res.instance.exports
-        console.log("res")
-        console.log(res)
+    
+        const { generate_address } =  require('./wasm-node/iota_address_benchmark')
             
         var t0 = Date.now();
-    
         let address = generate_address('9'.repeat(81), 0, 1, true)
         var t1 = Date.now();
     

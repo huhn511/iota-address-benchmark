@@ -1,6 +1,7 @@
 {
   "scripts": {
     "build": "webpack",
+    "build:nodejs": "wasm-pack build --target nodejs --out-dir wasm-node",
     "serve": "webpack-dev-server"
   },
   "devDependencies": {
