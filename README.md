@@ -1,5 +1,5 @@
 
-#iota-address-benchmark
+# iota-address-benchmark
 Testing address generation iota.js vs WASM
 
 Benchmark Results
